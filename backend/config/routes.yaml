@@ -1,0 +1,30 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+user_register:
+    path: '/api/user/register'
+    controller: App\Controller\UserController::register
+    methods: ['POST']
+
+user_login:
+    path: '/api/user/login'
+    controller: App\Controller\UserController::login
+    methods: ['POST']
+
+add_to_cart:
+    path: '/api/cart/add'
+    controller: App\Controller\ProductController::addToCart
+    methods: ['POST']
+
+get_products:
+    path: '/api/products'
+    controller: App\Controller\ProductController::getProducts
+    methods: ['GET']
+
+get_product:
+    path: '/api/product/{productId}'
+    controller: App\Controller\ProductController::getProduct
+    methods: ['GET']
